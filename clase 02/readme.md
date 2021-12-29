@@ -45,13 +45,39 @@ creo un archivo llamado **.gitkeep** que lo que hace es tener en cuenta la carpe
 vacia
 
 ### IMPORTANTE: forma corda te hacer un git add y un git commit.
-**NOTA:** Tengo que tener todos los archivos seguidos. si tengo alguno untracked, esos archivos no se van a commitear
+**NOTA:** Tengo que tener todos los archivos seguidos. si tengo alguno untracked, 
+esos archivos no se van a commitear
 git commit -am "mensaje commit"
 
 ### REMOTE
 
-#### Lista alias de remotes
+#### Lista alias de remotes y urls
 ```sh
 git remote -v
 ```
+#### agrego remoto a mi
+```sh
+git remote add <nombreAlias> <url-repo>
+```
+#### agrego remoto a mi
+```sh
+git remote add <nombre-antiguo> <nombre-nuevo>
+```
+#### borrar remoto
+```sh
+git remote rm <alias del remoto>
+```
+Ej:
+```sh
+git remote rm origin
+```
 
+#### Forma corta de hacer un status y ver los cambios en WD (Working Directory)
+```sh
+git status --short
+```
+
+## RAMAS (BRANCHES)
+```sh
+
+```
