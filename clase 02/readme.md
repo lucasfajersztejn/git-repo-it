@@ -28,12 +28,21 @@ ejemplo 2 commits
 git log -2 # cantidad de commits que va a mostrar el git log
 ```
 
-
 ```sh
 git log --oneline --decorate --all --graph
 ```
 
-git ignore
+### GIT IGNORE
 sirve para ignorar archivos que no quiero seguir.
 
-creo el archivo **.gitignore** en el directorio raíz y dentro coloco el nbombre del archivo o la carpeta que no quiero seguir.
+creo el archivo **.gitignore** en el directorio raíz y dentro coloco el nbombre 
+del archivo o la carpeta que no quiero seguir.
+
+### GIT KEEP
+Me permite seguir nueva carpeta vacia.
+
+creo un archivo llamado **.gitkeep** que lo que hace es tener en cuenta la carpeta 
+vacia
+
+### REMOTE
+
