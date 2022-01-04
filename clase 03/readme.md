@@ -1,110 +1,66 @@
-# Clase 01 - GIT
+# Clase 03 - GIT
 
-## Markdown (archivo.md)
+## Repaso de Branch
 
-https://www.markdownguide.org/cheat-sheet/
-
-## Saber si tengo git instalado
-
-**Nota:** ` = backtick => ALT + 96 
+### Listo ramas
 
 ```sh
-git --version
+git branch
 ```
-### Configuración inicial de GIT
 
-#### Configuro el usuario 
+### Creo una rama
 
 ```sh
-git config user.name "Maxi"
+git branch <nombreRama>
 ```
 
-#### Configuro el mail 
-```sh
-git config user.email "mlapeducacionit@gmail.com"
-```
-
-### Listo las configuración del usuario
-```sh
-git config --get-regexp user
-```
-
-## Comando de consola
-
-### Limpio la consola
+### Cambio entre ramas
 
 ```sh
-clear
+git switch <nombreRama>
 ```
-### Ingreso a un directorio
+
+## Git Merge
+
+### Tipos de Merge
+
+Fast-Fodward (No hay ningun cambio que se solape con lo que esta en la otra rama)
+
+Fast-Fodward - Unión automáticas (No hay ningun cambio que se solape con lo que esta en la otra rama)
+
+Recursiva -  Uniones automáticas (No hay colisiones de cambios)
+
+Manual - Conflictos (ocure cuando hay modificaciones en las mismas líneas)
+
+### Abortar Merge
 
 ```sh
-cd <directorio>
+git merge --abort
 ```
+### TAREAS: Agrego cosas que quiero tener en consideración.
 
-### Retrocedo directorio
+* Tener en cuenta subir una rama al remoto
+* Ver Clone
+* Ver Fork
+
+## ALIAS
+
+### ¿Cómo creo un alias?
 
 ```sh
-cd ..
+git config alias.lg "log --oneline --decorate --all --graph"
+git config alias.l "log --oneline"
+git config alias.s "status --short"
 ```
 
-### Listar archivos en cosola
+### Para editar el archivo de configuración de GIT
 
 ```sh
-ls -la
+git config -e
 ```
 
-### Para saber lo que está pasando en el WD 
-Comparar el WD con el último commit
+### Para eliminar un alias
 
 ```sh
-git status
+git config --unset alias.s
 ```
-
-### Paso del Working Directory (WD) al Index (staged)
-**IMPORTANTE:** Cuidado es case sensitive
-
-```sh
-git add <nombreArchivo> 
-```
-
-Ej:
-
-```sh
-git add README.md 
-```
-### Pasar del WD al INDEX más de un archivo
-```sh
-git add .
-```
-
-
-### Para pasar del INDEX al REPOSITORIO LOCAL
-
-```sh
-git commit -m <mensaje>
-```
-Ej:
-
-```sh
-git commit -m "Agrego el archivo README.md"
-```
-
-### GIT LOG
-
-```sh
-git log 
-```
-### 
-
-```sh
-git log --online
-```
-
-### PASOS para subir mi repo local al remoto
-
-1. git init
-2. git add README.md
-3. git commit -m "first commit"
-4. git remote add origin https://github.com/<tuNombreUsuario>/<tuRepo>
-5. git push -u origin master
